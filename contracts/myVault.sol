@@ -184,7 +184,7 @@ contract myVault {
     uint ethBalance = address(this).balance;
     require(ethBalance > 0, "No ETH available to wrap");
     emit myVaultLog('wrapETH', ethBalance);
-    wethToken.deposit{ value: ethBalance }();
+    wethToken.deposit();
   }
   
 }
